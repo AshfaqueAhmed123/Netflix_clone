@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+/************ header *************/
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/header-image.png);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+nav .logo {
+  width: 150px;
+}
+nav .buttons button {
+  padding: 08px 18px;
+  background-color: #db0001;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+nav .buttons .language-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 8px 10px;
+}
+nav .buttons .language-btn img {
+  width: 10px;
+}
+header .content {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+.content h1 {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  max-width: 650px;
+  text-align: center;
+}
+.content h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.content p {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.content form {
+  background-color: #fff;
+  display: flex;
+}
+
+.content form input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  padding-left: 10px;
+}
+
+.content form button {
+  height: 50px;
+  width: 150px;
+  background-color: #db0001;
+  border: 0;
+  outline: 0;
+}
+
+/************ features ************/
+
+.features {
+  background-color: #000;
+  color: #fff;
+}
+
+.features .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+  /* border-bottom: 2px solid red; */
+}
+.row .col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row .col .content {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.row .col .content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: left;
+}
+.row .col .content p {
+  width: 100%;
+  text-align: left;
+  font-size: 22px;
+}
+.row .col img {
+  width: 500px;
+}
+
+/************ faqs ************/
+.faqs {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding-top: 100px;
+  border-bottom: 5px solid #303030;
+}
+
+.faqs h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 40px;
+}
+
+.faqs .faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq label {
+  width: 50%;
+  margin-bottom: 10px;
+  height: 60px;
+  background: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.faq label::after {
+  content: "+";
+  font-size: 40px;
+  transition: all 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+
+.faq .answer p {
+  color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.answer {
+  width: 50%;
+  background: #303030;
+  margin-bottom: 05px;
+  margin-top: 0;
+}
+.accordian input[type="radio"]:checked + label + .answer p {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accordian input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.faqs small {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.faqs form {
+  background-color: #fff;
+  display: flex;
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+.faqs form input {
+  flex: 1;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  padding-left: 10px;
+}
+
+.faqs form button {
+  height: 50px;
+  width: 150px;
+  background-color: #db0001;
+  border: 0;
+  outline: 0;
+}
+
+/* footer */
+footer {
+  background: #000;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  padding-top: 50px;
+  padding-left: 12%;
+  padding-bottom: 20px;
+}
+
+footer .content {
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 40px;
+}
+
+footer .content li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+footer .language-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 8px 10px;
+  color: #fff;
+  margin-left: 12%;
+}
+
+footer .language-btn img {
+  width: 10px;
+}
+
+footer .copy-right {
+  margin-left: 12%;
+  color: #333;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  header {
+    width: 100vw;
+    height: 100vh;
+  }
+  header nav {
+    padding: 0;
+    padding: 20px 30px;
+  }
+  nav .logo {
+    width: 90px;
+  }
+  nav .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .buttons button {
+    padding: 4px 5px;
+  }
+  header .content {
+    width: 80%;
+    margin-top: 40px;
+  }
+  header .content h1 {
+    font-size: 30px;
+  }
+  header .content h3 {
+    font-weight: 400;
+  }
+  form {
+    width: 80vw;
+    height: 30px;
+    display: flex;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+  }
+  form input {
+    height: 0;
+    height: 30px;
+  }
+  form button {
+    width: 30%;
+    height: 30px;
+    color: white;
+  }
+  .features .row {
+    flex-direction: column;
+  }
+  .features .row .col {
+    width: 100%;
+  }
+  .features .row .col img {
+    width: 100%;
+  }
+  .features .row .col .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .features .row .col .content h1 {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .features .row .col .content p {
+    font-size: 15px;
+  }
+  .faqs h1 {
+    font-size: 20px;
+  }
+  .faq label {
+    width: 80%;
+    height: 0px;
+    padding: 20px;
+    font-size: 14px;
+  }
+  .faq label::after {
+    font-size: 22px;
+  }
+  .faq .answer {
+    width: 80%;
+  }
+  small {
+    text-align: center;
+  }
+  .faqs form {
+    width: 80%;
+    height: 40px;
+  }
+  .faqs form button {
+    width: 30%;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .content ul {
+    margin-bottom: 20px;
+  }
+  footer .buttons button {
+    margin-bottom: 20px;
+  }
+}
